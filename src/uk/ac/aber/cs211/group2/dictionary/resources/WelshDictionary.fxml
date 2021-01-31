@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane minHeight="600.0" minWidth="335.0" prefHeight="600.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uk.ac.aber.cs211.group2.dictionary.view.WelshDictionaryController">
+   <children>
+      <VBox prefHeight="200.0" prefWidth="100.0" spacing="2.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+         <children>
+            <HBox prefHeight="29.0" prefWidth="325.0" spacing="2.0">
+               <children>
+                  <Button fx:id="languageButton" minHeight="32.0" minWidth="60.0" mnemonicParsing="false" onAction="#changeLanguage" prefHeight="32.0" prefWidth="60.0" text="English">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Button>
+                  <ImageView fitHeight="32.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@uk/ac/aber/cs211/group2/Pictures/lupa.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </ImageView>
+                  <TextField fx:id="searchBox" nodeOrientation="LEFT_TO_RIGHT" prefHeight="32.0" prefWidth="50.0" promptText="Search" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+            <TableView fx:id="wordTable" nodeOrientation="LEFT_TO_RIGHT" prefHeight="515.0" prefWidth="325.0" VBox.vgrow="ALWAYS">
+              <columns>
+                <TableColumn fx:id="first" minWidth="-1.0" prefWidth="-1.0" text="Welsh" />
+                <TableColumn fx:id="second" minWidth="-1.0" prefWidth="-1.0" text="Form" />
+                 <TableColumn fx:id="third" minWidth="-1.0" prefWidth="-1.0" text="English" />
+                  <TableColumn fx:id="practice" minWidth="-1.0" prefWidth="-1.0" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <HBox minWidth="200.0" prefHeight="32.0" prefWidth="200.0">
+               <children>
+                  <HBox alignment="BOTTOM_LEFT" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Button alignment="CENTER" minHeight="32.0" minWidth="90.0" mnemonicParsing="false" onAction="#practiceList" prefHeight="32.0" prefWidth="90.0" text="Practice List" HBox.hgrow="NEVER">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox alignment="BOTTOM_RIGHT" prefHeight="32.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Button alignment="CENTER" minHeight="32.0" minWidth="110.0" mnemonicParsing="false" onAction="#addNewWord" prefHeight="32.0" prefWidth="110.0" text="Add New Word" HBox.hgrow="NEVER">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,13 @@
+.right-link-handle:hover {
+    -fx-background-color: rgba(2, 117, 0, 0.20);
+}
+
+.left-link-handle:hover {
+    -fx-background-color: rgba(2, 117, 0, 0.20);
+}
+
+.icon {
+    -fx-background-color: white;
+    -fx-border-color: black;
+}
+

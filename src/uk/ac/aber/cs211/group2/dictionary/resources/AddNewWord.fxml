@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="338.0" prefWidth="250.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uk.ac.aber.cs211.group2.dictionary.addNewWord.AddNewWordController">
+   <children>
+      <VBox prefHeight="320.0" prefWidth="240.0" spacing="10.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+         <children>
+            <Text nodeOrientation="LEFT_TO_RIGHT" strokeType="OUTSIDE" strokeWidth="0.0" text="Type a word that you want to add:" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="English:">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Text>
+            <TextField VBox.vgrow="ALWAYS" fx:id="englishWord">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </TextField>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Welsh:" />
+            <TextField VBox.vgrow="ALWAYS" fx:id="welshWord"/>
+            <Text nodeOrientation="LEFT_TO_RIGHT" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose what part of speech is your word:" VBox.vgrow="ALWAYS" />
+            <fx:define>
+               <ToggleGroup fx:id="$typeChoice" />
+            </fx:define>
+            <RadioButton mnemonicParsing="false" text="Masculine Noun" toggleGroup="$typeChoice" fx:id="masc"/>
+            <RadioButton mnemonicParsing="false" text="Feminine Noun" toggleGroup="$typeChoice" fx:id="fem"/>
+            <RadioButton mnemonicParsing="false" text="Verb" toggleGroup="$typeChoice" fx:id="verb"/>
+            <RadioButton mnemonicParsing="false" text="Other" toggleGroup="$typeChoice" fx:id="other"/>
+            <HBox prefHeight="25.0" prefWidth="240.0">
+               <children>
+                  <Button mnemonicParsing="false" text="Apply" onAction="#getWord">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" text="Cancel" fx:id="closeButton" onAction="#close"/>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

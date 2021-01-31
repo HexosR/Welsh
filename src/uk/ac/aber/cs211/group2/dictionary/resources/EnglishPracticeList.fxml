@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane minHeight="600.0" minWidth="335.0" prefHeight="600.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uk.ac.aber.cs211.group2.dictionary.practiceList.EnglishPracticeListController">
+   <children>
+      <VBox prefHeight="200.0" prefWidth="100.0" spacing="2.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+         <children>
+            <HBox prefHeight="32.0" prefWidth="325.0" spacing="2.0">
+               <children>
+                  <Button fx:id="languageButton" minHeight="32.0" minWidth="60.0" mnemonicParsing="false" onAction="#changeLanguage" prefHeight="32.0" prefWidth="60.0" text="Welsh" HBox.hgrow="ALWAYS" />
+                  <ImageView fitHeight="32.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@uk/ac/aber/cs211/group2/Pictures/lupa.png" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="searchBox" minHeight="32.0" prefHeight="32.0" promptText="Search" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+            <TableView fx:id="wordTable" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+              <columns>
+                 <TableColumn fx:id="first" minWidth="-1.0" prefWidth="-1.0" text="English" />
+                 <TableColumn fx:id="second" minWidth="-1.0" prefWidth="-1.0" text="Welsh" />
+                 <TableColumn fx:id="third" minWidth="-1.0" prefWidth="-1.0" text="Form" />
+                 <TableColumn fx:id="practice" minWidth="-1.0" prefWidth="-1.0" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <HBox alignment="CENTER" minHeight="32.0" prefHeight="32.0">
+               <children>
+                  <HBox alignment="BOTTOM_LEFT" prefHeight="100.0" prefWidth="168.0">
+                     <children>
+                        <Button fx:id="goDictionary" minHeight="32.0" mnemonicParsing="false" onAction="#backDictionary" prefHeight="32.0" text="Dictionary" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="BOTTOM_RIGHT" prefHeight="25.0" prefWidth="179.0" spacing="2.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Button fx:id="flashcards" minHeight="32.0" mnemonicParsing="false" onAction="#goFlashcards" prefHeight="32.0" text="Flashcards" />
+                        <Button fx:id="test" minHeight="32.0" mnemonicParsing="false" onAction="#goTests" prefHeight="32.0" text="Tests" />
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

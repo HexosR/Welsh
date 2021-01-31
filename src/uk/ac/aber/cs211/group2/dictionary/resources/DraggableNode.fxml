@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Text?>
+
+<fx:root fx:id="root_pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="153.0" styleClass="dragicon" stylesheets="@uk/ac/aber/cs211/group2/dictionary/resources/application.cssurces/application.css" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <StackPane prefHeight="60.0" prefWidth="150.0">
+         <children>
+            <Text fx:id="word" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" />
+            <HBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="60.0" prefWidth="150.0">
+               <children>
+                  <AnchorPane fx:id="left_link_handle" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="49.0" prefWidth="35.0" styleClass="left-link-handle" />
+                  <AnchorPane maxWidth="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="82.0" />
+                  <AnchorPane fx:id="right_link_handle" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="49.0" prefWidth="35.0" styleClass="right-link-handle" />
+               </children>
+            </HBox>
+         </children>
+      </StackPane>
+   </children>
+</fx:root>
